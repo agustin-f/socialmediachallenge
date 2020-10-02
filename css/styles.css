@@ -28,6 +28,7 @@ body {
 
 .grid {
     display: grid;
+    grid-column-gap: 4em;
 }
 
 
@@ -65,7 +66,7 @@ body {
     overflow: hidden;
     text-align: center;
     background-color: var(--light-grayish-blue-card-bgdar);
-    padding: 1.7em;
+    padding: 2.7em;
     position: relative;
 }
 
@@ -102,6 +103,7 @@ body {
     color: var(--dark-grayish-blue-text);
     font-size: .8em;
     font-weight: 700;
+    margin-bottom: 15px;
 }
 
 .card-title img {
@@ -133,4 +135,101 @@ body {
 
 .card-today img {
     margin-right: 5px;
+}
+
+
+/* overview */
+
+.overview {
+    margin-bottom: 500px;
+}
+
+.overview-color-title {
+    color: var(--dark-grayish-blue-text);
+}
+
+.overview-margin-title {
+    margin-bottom: 35px;
+}
+
+.card-end {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 60px;
+}
+
+.card-end-views {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-weight: 700;
+    color: var(--dark-grayish-blue-text);
+}
+
+.card-end-icon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.card-end-number {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 2.3em;
+    font-weight: 700;
+    position: sticky;
+    top: 0;
+    align-self: flex-end;
+}
+
+.card-end-updown {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: -webkit-sticky;
+    padding-bottom: 5px;
+    top: 0;
+    align-self: flex-end;
+}
+
+.card-end-percent {
+    font-weight: 700;
+    color: var(--dark-grayish-blue-text);
+    font-size: 0.75em;
+    margin-left: 2px;
+}
+
+.card-end-padding {
+    padding: 0.2em;
+}
+
+.number-no-padding-bottom {
+    padding-bottom: 0px;
+}
+
+
+/* responsive styles */
+
+@media screen and (min-width: 480px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 4em;
+    }
+    .wrapper {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 }
