@@ -1,6 +1,9 @@
+/* general styles */
+
 body {
     margin: 0px;
     font-family: 'Inter', sans-serif;
+    font-size: 14px;
 }
 
 :root {
@@ -9,7 +12,7 @@ body {
     --bright-red: hsl(356, 69%, 56%);
     --facebook: hsl(208, 92%, 53%);
     --twitter: hsl(203, 89%, 53%);
-    --instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
+    --instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
     --youTube: hsl(348, 97%, 39%);
     /* #### Light Theme */
     --white-bg: hsl(0, 0%, 100%);
@@ -23,18 +26,73 @@ body {
     padding: 0px 30px;
 }
 
+.grid {
+    display: grid;
+}
+
+
+/* header styles */
+
+.header {
+    background-color: var(--very-pale-blue-top-bg-pattern);
+    padding-bottom: 100px;
+    border-radius: 0px 0px 20px 20px;
+    padding-top: 2em;
+}
+
+.title {
+    margin: 0px;
+    font-size: 1.5em;
+}
+
+.top-cards {
+    margin-top: -50px;
+}
+
+.total-followers {
+    color: var(--dark-grayish-blue-text);
+    font-weight: 700;
+    margin-top: 5px;
+    border-bottom: 1px solid var(--dark-grayish-blue-text);
+    padding-bottom: 1.8em;
+}
+
+
+/* cards styles */
+
 .card {
-    border-radius: 5px;
+    border-radius: 8px;
     overflow: hidden;
     text-align: center;
     background-color: var(--light-grayish-blue-card-bgdar);
+    padding: 1.7em;
+    position: relative;
 }
 
 .card::before {
     content: "";
     height: 4px;
     display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.card.facebook::before {
     background: var(--facebook);
+}
+
+.card.twitter::before {
+    background: var(--twitter);
+}
+
+.card.instagram::before {
+    background: var(--instagram);
+}
+
+.card.youtube::before {
+    background: var(--youTube);
 }
 
 .card-title {
@@ -59,8 +117,8 @@ body {
     display: block;
     text-transform: uppercase;
     color: var(--dark-grayish-blue-text);
-    letter-spacing: 4px;
-    font-size: .75em;
+    letter-spacing: 5px;
+    font-size: 0.82em;
 }
 
 .card-today {
