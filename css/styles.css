@@ -20,6 +20,12 @@ body {
     --light-grayish-blue-card-bg: hsl(227, 47%, 96%);
     --dark-grayish-blue-text: hsl(228, 12%, 44%);
     --very-dark-blue-text: hsl(230, 17%, 14%);
+    /* dark mode colors */
+    --very-dark-blue: hsl(230, 17%, 14%);
+    --very-dark-blue-top: hsl(232, 19%, 15%);
+    --dark-desaturated-blue-card-bg: hsl(228, 28%, 20%);
+    --desaturated-blue-text:hsl(228, 34%, 66%);
+    --white-text: hsl(0, 0%, 100%);
 }
 
 .wrapper {
@@ -67,7 +73,8 @@ body {
     text-align: center;
     background-color: var(--light-grayish-blue-card-bgdar);
     padding: 2.7em;
-    position: relative;
+    position: relative;    
+    margin-bottom: 2.5em;
 }
 
 .card::before {
@@ -141,7 +148,7 @@ body {
 /* overview */
 
 .overview {
-    margin-bottom: 500px;
+    margin-bottom: 100px;
 }
 
 .overview-color-title {
@@ -156,6 +163,8 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-bottom: 60px;
+    padding: 2em;
+    border-radius: 8px;
 }
 
 .card-end-views {
@@ -164,6 +173,7 @@ body {
     justify-content: flex-start;
     font-weight: 700;
     color: var(--dark-grayish-blue-text);
+    margin-left: 5px;
 }
 
 .card-end-icon {
@@ -175,7 +185,7 @@ body {
 .card-end-number {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: flex-start;  
     font-size: 2.3em;
     font-weight: 700;
     position: sticky;
@@ -213,7 +223,7 @@ body {
 
 @media screen and (min-width: 480px) {
     .grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         grid-column-gap: 4em;
     }
     .wrapper {
@@ -232,4 +242,52 @@ body {
     .grid {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+}
+
+@media(prefers-color-scheme: dark){
+    body{
+        background-color: var(--very-dark-blue);
+    }
+
+    .header {
+        background-color: var(--very-dark-blue-top);        
+    }
+
+    .card {        
+        background-color: var(--dark-desaturated-blue-card-bg);      
+    }
+
+    .card-end {       
+        background-color: var(--dark-desaturated-blue-card-bg);
+        padding: 2em;
+    }
+
+    .card-followers-title {       
+        color: var(--dark-grayish-blue-text);       ;
+    }
+
+    .card-followers-number {       
+        color: var(--white-text);
+    }
+
+    .card-end-number{
+        color:var(--white-text);
+    }
+
+    .overview-color-title {
+        color: var(--white-text);
+    }
+
+    .title{
+        color: var(--white-text);
+    }
+
+    .overview{
+        background-color: var(--very-dark-blue);
+    }
+
+    .overview-margin-title{
+        margin-top: 2.5em;
+    }
+    
 }
